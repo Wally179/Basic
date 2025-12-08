@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Portfólio de Wallace Santos - Frontend Developer & UX Architect."
+      content="Portfólio de Wallace Santos - Desenvolvedor & UX Architect."
     />
 
     <meta
@@ -14,14 +14,13 @@
     />
     <meta
       property="og:description"
-      content="Especialista em React, Node.js e interfaces de alta performance. Veja meu portfólio e projetos."
+      content="Especialista em React, Node.js e interfaces de alta performance."
     />
     <meta property="og:image" content="cover.jpg" />
     <meta property="og:url" content="https://wally179.github.io/Basic" />
     <meta property="og:type" content="website" />
 
-    <link rel="icon" type="image/png" href="logo.svg" />
-
+    <link rel="icon" type="image/png" href="favicon.png" />
     <title>Wallace Santos | Desenvolvedor & UX Architect</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -173,21 +172,43 @@
         </a>
 
         <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-          <a href="#about" class="hover:text-emerald-400 transition-colors"
+          <a
+            href="#about"
+            class="hover:text-emerald-400 transition-colors"
+            data-i18n="nav_about"
             >Sobre</a
           >
-          <a href="#journey" class="hover:text-emerald-400 transition-colors"
+          <a
+            href="#journey"
+            class="hover:text-emerald-400 transition-colors"
+            data-i18n="nav_journey"
             >Jornada</a
           >
-          <a href="#arsenal" class="hover:text-emerald-400 transition-colors"
+          <a
+            href="#arsenal"
+            class="hover:text-emerald-400 transition-colors"
+            data-i18n="nav_arsenal"
             >Arsenal</a
           >
+
           <a
             href="#contact"
             class="bg-emerald-500 hover:bg-emerald-600 text-white px-5 py-2 rounded-full transition-all shadow-lg shadow-emerald-500/20"
+            data-i18n="nav_contact"
           >
             Contratar
           </a>
+
+          <button
+            id="lang-switch"
+            class="ml-2 px-3 py-2 rounded-full border border-white/10 hover:bg-white/5 text-slate-300 transition-colors flex items-center gap-2"
+            aria-label="Mudar idioma"
+          >
+            <i class="fas fa-globe"></i>
+            <span id="current-lang" class="font-mono text-xs font-bold"
+              >PT</span
+            >
+          </button>
         </div>
 
         <button
@@ -206,21 +227,25 @@
         <a
           href="#about"
           class="block text-lg font-medium hover:text-emerald-400"
+          data-i18n="nav_about"
           >Sobre</a
         >
         <a
           href="#journey"
           class="block text-lg font-medium hover:text-emerald-400"
+          data-i18n="nav_journey"
           >Jornada</a
         >
         <a
           href="#arsenal"
           class="block text-lg font-medium hover:text-emerald-400"
+          data-i18n="nav_arsenal"
           >Arsenal</a
         >
         <a
           href="#contact"
           class="block w-full text-center bg-emerald-500 text-white py-3 rounded-xl font-bold mt-2"
+          data-i18n="nav_contact"
         >
           Contratar Agora
         </a>
@@ -241,6 +266,7 @@
         <div class="space-y-6 animate-fade-in-up">
           <div
             class="inline-block px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold tracking-wider uppercase mb-2"
+            data-i18n="hero_availability"
           >
             Disponível para novos projetos
           </div>
@@ -250,10 +276,16 @@
             Wallace <br />
             <span class="text-gradient">Santos</span>
           </h1>
-          <h2 class="text-xl md:text-2xl text-slate-400 font-light">
+          <h2
+            class="text-xl md:text-2xl text-slate-400 font-light"
+            data-i18n="hero_role"
+          >
             Desenvolvedor & UX Architect
           </h2>
-          <p class="text-lg text-slate-400 leading-relaxed max-w-lg">
+          <p
+            class="text-lg text-slate-400 leading-relaxed max-w-lg"
+            data-i18n="hero_desc"
+          >
             Unindo a precisão da engenharia de software com a empatia do UX
             Design. Especialista em transformar requisitos complexos em
             interfaces performáticas, acessíveis e escaláveis com React e
@@ -268,7 +300,9 @@
               <div
                 class="absolute inset-0 w-full h-full bg-gradient-to-r from-emerald-400 to-emerald-500 translate-y-full group-hover:translate-y-0 transition-transform duration-300"
               ></div>
-              <span class="relative group-hover:text-white transition-colors"
+              <span
+                class="relative group-hover:text-white transition-colors"
+                data-i18n="hero_btn_projects"
                 >Ver Projetos</span
               >
             </a>
@@ -312,23 +346,26 @@
       <div
         class="max-w-4xl mx-auto glass-panel rounded-3xl p-8 md:p-12 border-l-4 border-l-emerald-500"
       >
-        <h2 class="font-display text-3xl font-bold text-white mb-6">
+        <h2
+          class="font-display text-3xl font-bold text-white mb-6"
+          data-i18n="about_title"
+        >
           O Elo Perdido entre Design e Código
         </h2>
         <div class="prose prose-lg prose-invert text-slate-300">
-          <p class="mb-4">
+          <p class="mb-4" data-i18n="about_p1">
             Minha jornada não começou no frontend, mas nas "entranhas" da
             tecnologia. Como técnico de redes, aprendi a importância da
             infraestrutura sólida e da resolução rápida de problemas. Isso me
             deu uma vantagem analítica rara no mundo do desenvolvimento.
           </p>
-          <p class="mb-4">
+          <p class="mb-4" data-i18n="about_p2">
             Porém, percebi que sistemas robustos falham se não forem
             utilizáveis. Mergulhei no UX Design para entender o fator humano.
             Hoje, como <strong>Engenheiro de Software</strong>, eu não apenas
             "traduzo" layouts do Figma para React.
           </p>
-          <p>
+          <p data-i18n="about_p3">
             Eu arquiteturo interfaces que respeitam a intenção do design
             (pixel-perfect) enquanto mantenho o código limpo, testável e
             acessível. Do <em>Bloom by IMPACT</em> a projetos pessoais, meu foco
@@ -340,7 +377,8 @@
 
     <section id="journey" class="py-24 px-6 max-w-5xl mx-auto">
       <h2 class="font-display text-4xl font-bold text-white mb-16 text-center">
-        Trajetória de <span class="text-emerald-400">Impacto</span>
+        <span data-i18n="journey_title">Trajetória de Impacto</span>
+        <span class="text-emerald-400" data-i18n="journey_subtitle"></span>
       </h2>
 
       <div class="relative space-y-12">
@@ -378,8 +416,10 @@
             </div>
             <div class="glass-panel p-6 rounded-xl">
               <h4 class="text-lg font-bold text-white mb-3">
-                Desenvolvedor
-                <span class="block text-sm font-normal text-slate-400 mt-1"
+                <span data-i18n="devmagic_role">Desenvolvedor</span>
+                <span
+                  class="block text-sm font-normal text-slate-400 mt-1"
+                  data-i18n="devmagic_sub"
                   >Projeto: Bloom by IMPACT (SaaS ESG)</span
                 >
               </h4>
@@ -389,7 +429,7 @@
                     class="fas fa-code text-emerald-500 mt-1"
                     aria-hidden="true"
                   ></i>
-                  <span
+                  <span data-i18n="devmagic_li1"
                     ><strong>Codifiquei</strong> dashboards complexos de alta
                     performance utilizando React, Redux e TypeScript.</span
                   >
@@ -399,7 +439,7 @@
                     class="fas fa-layer-group text-emerald-500 mt-1"
                     aria-hidden="true"
                   ></i>
-                  <span
+                  <span data-i18n="devmagic_li2"
                     >Arquiteturei e implementei o
                     <strong>Design System</strong> no código, criando uma
                     biblioteca de componentes reutilizáveis.</span
@@ -410,7 +450,7 @@
                     class="fas fa-vial text-emerald-500 mt-1"
                     aria-hidden="true"
                   ></i>
-                  <span
+                  <span data-i18n="devmagic_li3"
                     >Garanti a estabilidade do software escrevendo
                     <strong>testes automatizados</strong> (Jest/Cypress) e
                     realizando Code Reviews.</span
@@ -432,7 +472,10 @@
               >
             </div>
             <div class="glass-panel p-6 rounded-xl text-left md:text-right">
-              <h4 class="text-lg font-bold text-white mb-3">
+              <h4
+                class="text-lg font-bold text-white mb-3"
+                data-i18n="settaport_role"
+              >
                 Suporte & Infraestrutura
               </h4>
               <ul
@@ -443,7 +486,7 @@
                     class="fas fa-check-circle text-indigo-500 mt-1"
                     aria-hidden="true"
                   ></i>
-                  <span
+                  <span data-i18n="settaport_li1"
                     >Manutenção crítica de hardware e redes, garantindo alta
                     disponibilidade (SLA) para operações da empresa.</span
                   >
@@ -453,7 +496,7 @@
                     class="fas fa-check-circle text-indigo-500 mt-1"
                     aria-hidden="true"
                   ></i>
-                  <span
+                  <span data-i18n="settaport_li2"
                     >Resolução analítica de incidentes, base para minha atual
                     facilidade com debugging de código.</span
                   >
@@ -489,8 +532,9 @@
       <div class="max-w-6xl mx-auto">
         <h2
           class="font-display text-4xl font-bold text-white mb-12 text-center"
+          data-i18n="arsenal_title"
         >
-          Arsenal <span class="text-gradient">Técnico</span>
+          Arsenal Técnico
         </h2>
 
         <div class="grid md:grid-cols-3 gap-6">
@@ -502,7 +546,12 @@
             >
               <i class="fab fa-react"></i>
             </div>
-            <h3 class="text-xl font-bold text-white mb-4">Frontend Moderno</h3>
+            <h3
+              class="text-xl font-bold text-white mb-4"
+              data-i18n="arsenal_front"
+            >
+              Frontend Moderno
+            </h3>
             <div class="flex flex-wrap gap-2">
               <span
                 class="px-3 py-1 bg-slate-800 rounded text-sm text-slate-300 border border-slate-700"
@@ -535,7 +584,12 @@
             >
               <i class="fab fa-figma"></i>
             </div>
-            <h3 class="text-xl font-bold text-white mb-4">Design & UX</h3>
+            <h3
+              class="text-xl font-bold text-white mb-4"
+              data-i18n="arsenal_design"
+            >
+              Design & UX
+            </h3>
             <div class="flex flex-wrap gap-2">
               <span
                 class="px-3 py-1 bg-slate-800 rounded text-sm text-slate-300 border border-slate-700"
@@ -569,7 +623,10 @@
             >
               <i class="fas fa-server"></i>
             </div>
-            <h3 class="text-xl font-bold text-white mb-4">
+            <h3
+              class="text-xl font-bold text-white mb-4"
+              data-i18n="arsenal_back"
+            >
               Backend & Qualidade
             </h3>
             <div class="flex flex-wrap gap-2">
@@ -600,10 +657,16 @@
       class="py-20 px-6 border-t border-white/5 bg-slate-900 relative"
     >
       <div class="max-w-4xl mx-auto text-center">
-        <h2 class="font-display text-4xl md:text-5xl font-bold text-white mb-6">
+        <h2
+          class="font-display text-4xl md:text-5xl font-bold text-white mb-6"
+          data-i18n="footer_title"
+        >
           Vamos construir o futuro?
         </h2>
-        <p class="text-slate-400 mb-10 max-w-xl mx-auto">
+        <p
+          class="text-slate-400 mb-10 max-w-xl mx-auto"
+          data-i18n="footer_desc"
+        >
           Estou pronto para elevar o nível do seu produto com código limpo e
           design centrado no usuário.
         </p>
@@ -622,7 +685,7 @@
             class="px-8 py-4 glass-panel hover:bg-white/10 text-white rounded-xl font-bold transition-all flex items-center justify-center gap-2"
           >
             <i class="fab fa-linkedin"></i>
-            Conectar no LinkedIn
+            <span data-i18n="footer_linkedin">Conectar no LinkedIn</span>
           </a>
         </div>
 
@@ -642,6 +705,9 @@
     </a>
 
     <script>
+      // -------------------------
+      // 1. Mouse Shine Effect
+      // -------------------------
       const shine = document.getElementById("mouse-shine");
       document.addEventListener("mousemove", (e) => {
         requestAnimationFrame(() => {
@@ -650,6 +716,9 @@
         });
       });
 
+      // -------------------------
+      // 2. Navbar Zoom Effect
+      // -------------------------
       const navbar = document.getElementById("navbar");
       window.addEventListener("scroll", () => {
         const mobileMenu = document.getElementById("mobile-menu");
@@ -664,6 +733,9 @@
         }
       });
 
+      // -------------------------
+      // 3. Mobile Menu Toggle
+      // -------------------------
       const btn = document.getElementById("mobile-menu-btn");
       const menu = document.getElementById("mobile-menu");
 
@@ -681,6 +753,9 @@
         });
       });
 
+      // -------------------------
+      // 4. Terminal Animation
+      // -------------------------
       const terminalContent = [
         { text: "git checkout feature/bloom-architecture", type: "input" },
         {
@@ -728,7 +803,6 @@
 
       async function runTerminal() {
         const container = document.getElementById("terminal-body");
-
         for (const line of terminalContent) {
           const lineDiv = document.createElement("div");
           lineDiv.className = "terminal-line mb-1";
@@ -754,15 +828,134 @@
           await new Promise((r) => setTimeout(r, 400));
           container.scrollTop = container.scrollHeight;
         }
-
         const cursorLine = document.createElement("div");
         cursorLine.className = "terminal-line";
         cursorLine.innerHTML =
           '<span class="command-prompt">➜ ~</span><span class="w-2 h-4 bg-emerald-500 animate-cursor inline-block ml-1"></span>';
         container.appendChild(cursorLine);
       }
-
       setTimeout(runTerminal, 1000);
+
+      // -------------------------
+      // 5. Translation Logic (i18n)
+      // -------------------------
+      const translations = {
+        pt: {
+          nav_about: "Sobre",
+          nav_journey: "Jornada",
+          nav_arsenal: "Arsenal",
+          nav_contact: "Contratar",
+          hero_availability: "Disponível para novos projetos",
+          hero_role: "Desenvolvedor & UX Architect",
+          hero_desc:
+            "Unindo a precisão da engenharia de software com a empatia do UX Design. Especialista em transformar requisitos complexos em interfaces performáticas, acessíveis e escaláveis com React e Next.js.",
+          hero_btn_projects: "Ver Projetos",
+          about_title: "O Elo Perdido entre Design e Código",
+          about_p1:
+            "Minha jornada não começou no frontend, mas nas 'entranhas' da tecnologia. Como técnico de redes, aprendi a importância da infraestrutura sólida e da resolução rápida de problemas. Isso me deu uma vantagem analítica rara no mundo do desenvolvimento.",
+          about_p2:
+            "Porém, percebi que sistemas robustos falham se não forem utilizáveis. Mergulhei no UX Design para entender o fator humano. Hoje, como <strong>Engenheiro de Software</strong>, eu não apenas 'traduzo' layouts do Figma para React.",
+          about_p3:
+            "Eu arquiteturo interfaces que respeitam a intenção do design (pixel-perfect) enquanto mantenho o código limpo, testável e acessível. Do <em>Bloom by IMPACT</em> a projetos pessoais, meu foco é criar produtos que escalam tecnicamente e encantam visualmente.",
+          journey_title: "Trajetória de Impacto",
+          devmagic_role: "Desenvolvedor",
+          devmagic_sub: "Projeto: Bloom by IMPACT (SaaS ESG)",
+          devmagic_li1:
+            "<strong>Codifiquei</strong> dashboards complexos de alta performance utilizando React, Redux e TypeScript.",
+          devmagic_li2:
+            "Arquiteturei e implementei o <strong>Design System</strong> no código, criando uma biblioteca de componentes reutilizáveis.",
+          devmagic_li3:
+            "Garanti a estabilidade do software escrevendo <strong>testes automatizados</strong> (Jest/Cypress) e realizando Code Reviews.",
+          settaport_role: "Suporte & Infraestrutura",
+          settaport_li1:
+            "Manutenção crítica de hardware e redes, garantindo alta disponibilidade (SLA) para operações da empresa.",
+          settaport_li2:
+            "Resolução analítica de incidentes, base para minha atual facilidade com debugging de código.",
+          arsenal_title: "Arsenal Técnico",
+          arsenal_front: "Frontend Moderno",
+          arsenal_design: "Design & UX",
+          arsenal_back: "Backend & Qualidade",
+          footer_title: "Vamos construir o futuro?",
+          footer_desc:
+            "Estou pronto para elevar o nível do seu produto com código limpo e design centrado no usuário.",
+          footer_linkedin: "Conectar no LinkedIn",
+        },
+        en: {
+          nav_about: "About",
+          nav_journey: "Journey",
+          nav_arsenal: "Arsenal",
+          nav_contact: "Hire Me",
+          hero_availability: "Available for new projects",
+          hero_role: "Developer & UX Architect",
+          hero_desc:
+            "Merging software engineering precision with UX Design empathy. Specialist in transforming complex requirements into performant, accessible, and scalable interfaces using React and Next.js.",
+          hero_btn_projects: "View Projects",
+          about_title: "The Missing Link Between Design and Code",
+          about_p1:
+            "My journey didn't start in frontend, but in the 'guts' of technology. As a Network Technician, I learned the importance of solid infrastructure and fast troubleshooting. This gave me a rare analytical advantage in software development.",
+          about_p2:
+            "However, I realized robust systems fail if they aren't usable. I dove into UX Design to understand the human factor. Today, as a <strong>Software Engineer</strong>, I don't just 'translate' Figma layouts to React.",
+          about_p3:
+            "I architect interfaces that respect design intent (pixel-perfect) while keeping code clean, testable, and accessible. From <em>Bloom by IMPACT</em> to personal projects, my focus is creating products that scale technically and delight visually.",
+          journey_title: "Impact Journey",
+          devmagic_role: "Developer",
+          devmagic_sub: "Project: Bloom by IMPACT (SaaS ESG)",
+          devmagic_li1:
+            "<strong>Coded</strong> complex high-performance dashboards using React, Redux, and TypeScript.",
+          devmagic_li2:
+            "Architected and implemented the <strong>Design System</strong> in code, creating a reusable component library.",
+          devmagic_li3:
+            "Ensured software stability by writing <strong>automated tests</strong> (Jest/Cypress) and performing Code Reviews.",
+          settaport_role: "Support & Infrastructure",
+          settaport_li1:
+            "Critical hardware and network maintenance, ensuring high availability (SLA) for company operations.",
+          settaport_li2:
+            "Analytical incident resolution, the foundation for my current ease with code debugging.",
+          arsenal_title: "Technical Arsenal",
+          arsenal_front: "Modern Frontend",
+          arsenal_design: "Design & UX",
+          arsenal_back: "Backend & Quality",
+          footer_title: "Let's build the future?",
+          footer_desc:
+            "I'm ready to elevate your product with clean code and user-centered design.",
+          footer_linkedin: "Connect on LinkedIn",
+        },
+      };
+
+      let currentLang = "pt";
+
+      function updateContent(lang) {
+        document.querySelectorAll("[data-i18n]").forEach((element) => {
+          const key = element.getAttribute("data-i18n");
+          if (translations[lang][key]) {
+            element.innerHTML = translations[lang][key];
+          }
+        });
+        document.getElementById("current-lang").innerText =
+          lang === "pt" ? "PT" : "EN";
+        localStorage.setItem("preferredLang", lang);
+        currentLang = lang;
+      }
+
+      const langBtn = document.getElementById("lang-switch");
+      langBtn.addEventListener("click", () => {
+        const newLang = currentLang === "pt" ? "en" : "pt";
+        updateContent(newLang);
+      });
+
+      // Initialize based on Browser or LocalStorage
+      window.addEventListener("DOMContentLoaded", () => {
+        const savedLang = localStorage.getItem("preferredLang");
+        const browserLang = navigator.language || navigator.userLanguage;
+
+        if (savedLang) {
+          updateContent(savedLang);
+        } else if (browserLang.includes("en")) {
+          updateContent("en");
+        } else {
+          updateContent("pt");
+        }
+      });
     </script>
   </body>
 </html>
