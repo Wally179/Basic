@@ -1,10 +1,5 @@
 <div align="center">
-  
-  ![Status](https://img.shields.io/badge/Status-Deployed-success?style=for-the-badge)
-  ![Tech](https://img.shields.io/badge/Tech-HTML%20%7C%20CSS%20%7C%20JS-orange?style=for-the-badge)
 
-  <br />
-  <br />
 
   <a href="#-portfólio-profissional---wallace-santos">
     <img src="https://img.shields.io/badge/Leia%20em-Português-22c55e?style=for-the-badge&logo=brazil&logoColor=white" alt="Ler em Português">
@@ -153,5 +148,11 @@ If you are looking for a developer who combines **clean code**, **architectural 
 </div>
 
 ---
+
+![Status](https://img.shields.io/badge/Status-Deployed-success?style=for-the-badge)
+![Tech](https://img.shields.io/badge/Tech-HTML%20%7C%20CSS%20%7C%20JS-orange?style=for-the-badge)
+
+  <br />
+  <br />
 
 _Developed with 💚 by Wallace Santos_
