@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <link rel="icon" type="image/png" href="../assets/logo.svg" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bloom Project | Engenharia de Software</title>
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              display: ["Space Grotesk", "sans-serif"],
+              mono: ["Fira Code", "monospace"],
+            },
+            colors: {
+              emerald: { 400: "#34D399", 500: "#10B981" },
+              slate: { 850: "#1e293b", 900: "#0f172a" },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body
+    class="antialiased bg-slate-950 text-slate-300 selection:bg-emerald-500 selection:text-white"
+  >
+    <nav class="fixed top-6 left-0 right-0 z-50 w-11/12 max-w-5xl mx-auto">
+      <div
+        class="glass-panel rounded-full px-6 py-3 flex justify-between items-center bg-slate-900/80 backdrop-blur-md border border-white/10 shadow-lg"
+      >
+        <span class="font-display font-bold text-xl text-white"
+          >Bloom<span class="text-emerald-400">.</span></span
+        >
+
+        <div class="flex items-center gap-6">
+          <div class="flex gap-3">
+            <button
+              onclick="changeLanguage('pt')"
+              class="hover:scale-110 transition-transform grayscale hover:grayscale-0 opacity-70 hover:opacity-100"
+              title="Português"
+            >
+              <img
+                src="https://flagcdn.com/w40/br.png"
+                alt="PT"
+                class="w-6 h-auto rounded shadow-sm"
+              />
+            </button>
+            <button
+              onclick="changeLanguage('en')"
+              class="hover:scale-110 transition-transform grayscale hover:grayscale-0 opacity-70 hover:opacity-100"
+              title="English"
+            >
+              <img
+                src="https://flagcdn.com/w40/us.png"
+                alt="EN"
+                class="w-6 h-auto rounded shadow-sm"
+              />
+            </button>
+          </div>
+
+          <a
+            href="../index.html#projects"
+            class="text-sm font-medium hover:text-emerald-400 transition-colors flex items-center gap-2 group border-l border-white/10 pl-6"
+          >
+            <i
+              class="fas fa-arrow-left group-hover:-translate-x-1 transition-transform"
+            ></i>
+            <span data-i18n="project_back">Voltar</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <header class="pt-40 pb-20 px-6 relative overflow-hidden">
+      <div
+        class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-emerald-500/10 rounded-full blur-[100px] -z-10"
+      ></div>
+
+      <div class="max-w-4xl mx-auto text-center space-y-6">
+        <div
+          class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono"
+        >
+          <span
+            class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"
+          ></span>
+          HIGH PERFORMANCE FRONTEND
+        </div>
+
+        <h1
+          class="font-display text-4xl md:text-6xl font-bold text-white tracking-tight mb-4"
+        >
+          Bloom by IMPACT
+        </h1>
+
+        <p
+          class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed"
+          data-i18n="bloom_hero_desc"
+        >
+          Plataforma de auditoria em larga escala para conformidade com ODS da
+          ONU. Focada em processamento de grandes volumes de dados no cliente
+          sem comprometer a fluidez da interface.
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-3 pt-4 opacity-80">
+          <span
+            class="px-3 py-1 bg-slate-900 border border-slate-800 rounded text-xs font-mono text-blue-400"
+            ><i class="fab fa-react mr-1"></i> React</span
+          >
+          <span
+            class="px-3 py-1 bg-slate-900 border border-slate-800 rounded text-xs font-mono text-blue-300"
+            ><i class="fab fa-js mr-1"></i> TypeScript</span
+          >
+          <span
+            class="px-3 py-1 bg-slate-900 border border-slate-800 rounded text-xs font-mono text-pink-400"
+            ><i class="fas fa-paint-brush mr-1"></i> Styled Components</span
+          >
+          <span
+            class="px-3 py-1 bg-slate-900 border border-slate-800 rounded text-xs font-mono text-purple-400"
+            ><i class="fas fa-vial mr-1"></i> Jest</span
+          >
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 pb-24 space-y-24">
+      <section class="relative group">
+        <div
+          class="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-2xl opacity-20 group-hover:opacity-40 transition duration-1000 blur"
+        ></div>
+        <div
+          class="relative rounded-xl overflow-hidden border border-white/10 shadow-2xl bg-slate-900"
+        >
+          <img
+            src="../assets/images/bloom-print.jpg"
+            alt="Bloom Dashboard Interface"
+            class="w-full h-auto"
+          />
+        </div>
+        <div
+          class="mt-4 flex items-center justify-center gap-2 text-xs text-slate-600 font-mono"
+        >
+          <i class="fas fa-lock"></i>
+          <span data-i18n="bloom_nda"
+            >Nota: Dados sensíveis foram anonimizados para exibição
+            pública.</span
+          >
+        </div>
+      </section>
+
+      <section
+        class="grid md:grid-cols-12 gap-12 border-b border-white/5 pb-16"
+      >
+        <div class="md:col-span-4">
+          <h2
+            class="text-2xl font-bold text-white mb-4"
+            data-i18n="bloom_context_title"
+          >
+            O Contexto
+          </h2>
+          <div class="w-12 h-1 bg-emerald-500 rounded mb-6"></div>
+        </div>
+        <div class="md:col-span-8 space-y-6 text-slate-400 leading-relaxed">
+          <p data-i18n="bloom_context_p1">
+            O Bloom é utilizado por grandes corporações para alinhar suas
+            operações aos 17 Objetivos de Desenvolvimento Sustentável da ONU.
+            Isso envolve cruzar dados financeiros, logísticos e humanos.
+          </p>
+          <p data-i18n="bloom_context_p2">
+            Como Engenheiro Frontend, meu papel principal foi garantir que
+            dashboards analíticos conseguissem renderizar e filtrar
+            <strong>dezenas de milhares de registros</strong> em tempo real no
+            navegador, mantendo a taxa de atualização em 60 FPS,
+            independentemente da máquina do usuário.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2
+          class="text-3xl font-display font-bold text-white mb-10 text-center"
+          data-i18n="bloom_stack_title"
+        >
+          Arquitetura & Tecnologias
+        </h2>
+
+        <div class="grid md:grid-cols-4 gap-6">
+          <div
+            class="glass-panel p-6 rounded-xl border-t-2 border-t-blue-500 bg-slate-900/50 border-white/5"
+          >
+            <h3 class="text-white font-bold mb-4 flex items-center gap-2">
+              <i class="fab fa-react"></i> Frontend Core
+            </h3>
+            <ul class="space-y-2 text-sm text-slate-400">
+              <li>• React</li>
+              <li>• TypeScript</li>
+              <li>• Styled Components</li>
+              <li>• Material UI (MUI)</li>
+            </ul>
+          </div>
+
+          <div
+            class="glass-panel p-6 rounded-xl border-t-2 border-t-green-500 bg-slate-900/50 border-white/5"
+          >
+            <h3 class="text-white font-bold mb-4 flex items-center gap-2">
+              <i class="fab fa-node-js"></i> Backend
+            </h3>
+            <ul class="space-y-2 text-sm text-slate-400">
+              <li>• Node.js</li>
+              <li>• REST API</li>
+              <li>• Middleware Auth</li>
+              <li>• Integração JSON</li>
+            </ul>
+          </div>
+
+          <div
+            class="glass-panel p-6 rounded-xl border-t-2 border-t-yellow-500 bg-slate-900/50 border-white/5"
+          >
+            <h3 class="text-white font-bold mb-4 flex items-center gap-2">
+              <i class="fas fa-vial"></i> Qualidade
+            </h3>
+            <ul class="space-y-2 text-sm text-slate-400">
+              <li>• Jest (Unit Test)</li>
+              <li>• SOLID Principles</li>
+              <li>• Clean Code</li>
+              <li>• Componentização</li>
+            </ul>
+          </div>
+
+          <div
+            class="glass-panel p-6 rounded-xl border-t-2 border-t-purple-500 bg-slate-900/50 border-white/5"
+          >
+            <h3 class="text-white font-bold mb-4 flex items-center gap-2">
+              <i class="fas fa-rocket"></i> DevOps/Agile
+            </h3>
+            <ul class="space-y-2 text-sm text-slate-400">
+              <li>• CI/CD Pipelines</li>
+              <li>• GIT / Gitflow</li>
+              <li>• SCRUM / JIRA</li>
+              <li>• Code Review</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid md:grid-cols-2 gap-12">
+        <div class="space-y-6">
+          <h2 class="text-2xl font-bold text-white flex items-center gap-3">
+            <span
+              class="w-8 h-8 rounded bg-red-500/10 flex items-center justify-center text-red-500 text-sm"
+              ><i class="fas fa-fire"></i
+            ></span>
+            <span data-i18n="bloom_challenge_title"
+              >O Gargalo de Performance</span
+            >
+          </h2>
+          <p
+            class="text-slate-400 leading-relaxed"
+            data-i18n="bloom_challenge_desc"
+          >
+            A renderização inicial dos relatórios carregava mais de
+            <strong>25.000 nós no DOM</strong> simultaneamente. Isso causava o
+            congelamento da <em>Main Thread</em> (block time > 4s) em laptops
+            corporativos padrão. <br /><br />
+            O desafio era manter a funcionalidade de "Busca Global" e
+            "Ordenação" no Front-end (para evitar round-trips ao servidor) sem
+            travar a interface do usuário.
+          </p>
+        </div>
+
+        <div class="space-y-6">
+          <h2 class="text-2xl font-bold text-white flex items-center gap-3">
+            <span
+              class="w-8 h-8 rounded bg-emerald-500/10 flex items-center justify-center text-emerald-500 text-sm"
+              ><i class="fas fa-microchip"></i
+            ></span>
+            <span data-i18n="bloom_solution_title">A Solução Técnica</span>
+          </h2>
+          <p
+            class="text-slate-400 leading-relaxed"
+            data-i18n="bloom_solution_desc"
+          >
+            Implementei uma estratégia de
+            <strong>Virtualização (Windowing)</strong> customizada. Em vez de
+            renderizar a lista inteira, o React mantém no DOM apenas os itens
+            visíveis no viewport (+ um pequeno buffer). <br /><br />
+            Além disso, utilizei princípios **SOLID** para desacoplar a lógica
+            de negócio da camada de visualização com **Styled Components**,
+            garantindo manutenibilidade.
+          </p>
+        </div>
+      </section>
+
+      <section
+        class="bg-slate-900 rounded-xl overflow-hidden border border-slate-800 shadow-2xl font-mono text-xs md:text-sm"
+      >
+        <div
+          class="bg-slate-950 px-4 py-2 flex items-center justify-between border-b border-slate-800"
+        >
+          <div class="flex items-center gap-2">
+            <span class="text-blue-400"><i class="fab fa-react"></i></span>
+            <span class="text-slate-500">components/VirtualList.tsx</span>
+          </div>
+          <span class="text-slate-600">Performance Optimization</span>
+        </div>
+        <div class="p-6 text-slate-300 overflow-x-auto">
+          <pre><code><span class="text-slate-500">// Hook customizado para gerenciar renderização virtual de 10k+ itens</span>
+<span class="text-purple-400">export const</span> useVirtualization = &lt;<span class="text-yellow-300">T</span>&gt;(
+  <span class="text-blue-400">items</span>: <span class="text-yellow-300">T</span>[], 
+  <span class="text-blue-400">height</span>: <span class="text-blue-400">number</span>
+) => {
+  <span class="text-purple-400">const</span> [scrollTop, setScrollTop] = useState(0);
+
+  <span class="text-purple-400">const</span> visibleCount = Math.ceil(window.innerHeight / height);
+  <span class="text-purple-400">const</span> startNode = Math.floor(scrollTop / height);
+  
+  <span class="text-slate-500">// Renderiza apenas o necessário + buffer de segurança</span>
+  <span class="text-purple-400">const</span> visibleItems = useMemo(() => {
+    <span class="text-purple-400">return</span> items.slice(
+      startNode, 
+      startNode + visibleCount + 5 <span class="text-slate-500">// +5 Buffer items</span>
+    );
+  }, [items, startNode, visibleCount]);
+
+  <span class="text-purple-400">return</span> { visibleItems, startNode, totalHeight: items.length * height };
+};</code></pre>
+        </div>
+      </section>
+    </main>
+
+    <footer class="py-12 border-t border-white/5 text-center">
+      <p class="text-slate-600 text-sm">© 2025 Wallace Santos.</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,131 @@
+/* =========================================
+   VARIÁVEIS GLOBAIS & RESET
+   ========================================= */
+:root {
+  --bg-color: #0f172a;
+  --text-color: #cbd5e1;
+  --accent-color: #10b981;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  overflow-x: hidden; /* Evita rolagem horizontal indesejada */
+}
+
+/* =========================================
+   COMPONENTES VISUAIS (GLASSMORPHISM)
+   ========================================= */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.glass-panel:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(16, 185, 129, 0.3); /* Verde Emerald */
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   EFEITOS ESPECIAIS
+   ========================================= */
+/* Brilho do Mouse (Mouse Shine) */
+#mouse-shine {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(
+    circle,
+    rgba(16, 185, 129, 0.05) 0%,
+    rgba(0, 0, 0, 0) 60%
+  );
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: screen;
+}
+
+/* Texto com Gradiente (Usado no Nome Principal) */
+.text-gradient {
+  background: linear-gradient(to right, #34d399, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* =========================================
+   SCROLLBAR PERSONALIZADA
+   ========================================= */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
+}
+
+/* =========================================
+   ESTILOS DO TERMINAL (HOME)
+   ========================================= */
+.terminal-line {
+  min-height: 1.5rem;
+  display: flex;
+}
+
+.command-prompt {
+  color: #34d399; /* Emerald 400 */
+  margin-right: 0.5rem;
+}
+
+.terminal-output {
+  color: #cbd5e1; /* Slate 300 */
+}
+
+.success-text {
+  color: #34d399;
+}
+
+.info-text {
+  color: #60a5fa; /* Blue 400 */
+}
+
+/* =========================================
+   ESTILOS DAS ABAS (VS CODE STYLE)
+   ========================================= */
+
+/* Aba Ativa */
+.tab-btn.active {
+  background-color: #1e293b; /* Slate 800 */
+  color: #fff;
+  border-top: 2px solid #10b981; /* Linha Verde no topo */
+}
+
+/* Aba Inativa */
+.tab-btn {
+  border-top: 2px solid transparent; /* Evita pulo de layout */
+  opacity: 0.7;
+}
+
+.tab-btn:hover {
+  opacity: 1;
+}
+
+/* Esconde conteúdo inativo */
+.hidden {
+  display: none;
+}
